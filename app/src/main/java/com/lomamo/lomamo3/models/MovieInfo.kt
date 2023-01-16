@@ -1,7 +1,6 @@
 package com.lomamo.lomamo3.models
 
 import com.google.gson.annotations.SerializedName
-import kotlinx.android.parcel.Parcelize
 
 
 data class MovieInfo (

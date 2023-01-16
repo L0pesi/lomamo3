@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "436006670219",
+    "project_id": "lomamo-27127",
+    "storage_bucket": "lomamo-27127.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:436006670219:android:560c09c87104ac0297e98e",
+        "android_client_info": {
+          "package_name": "com.lomamo.lomamo3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "436006670219-k7lk10at8umcu1l7ur0feh6ikfu9uk3n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAXHmwoUC_mfQ4FckxatdiCxYoVKBq4Cs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "436006670219-k7lk10at8umcu1l7ur0feh6ikfu9uk3n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

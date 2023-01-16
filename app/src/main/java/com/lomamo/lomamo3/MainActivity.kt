@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.FirebaseApp
 import com.lomamo.lomamo3.adapters.MovieAdapter
 import com.lomamo.lomamo3.models.Movie
 import com.lomamo.lomamo3.models.MovieResponse
@@ -21,7 +22,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
 
         rv_movies_list.layoutManager = LinearLayoutManager(this)
         rv_movies_list.setHasFixedSize(true)
