@@ -1,4 +1,4 @@
-package com.lomamo.lomamo3
+package com.lomamo.lomamo3.adapters
 
 
 import android.view.LayoutInflater
@@ -6,20 +6,25 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.lomamo.lomamo3.R
 import com.lomamo.lomamo3.models.Movie
 import kotlinx.android.synthetic.main.movie_item.view.*
 
 
 class MovieAdapter(
-    private val movies : List<Movie>
+    private val movies : List<Movie>,
+    private val listener: OnMovieClickListener
 ) : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
     class MovieViewHolder(view: View) : RecyclerView.ViewHolder(view){
         private val IMAGE_BASE = "https://image.tmdb.org/t/p/w500/"
-        fun bindMovie(movie : Movie){
+        fun bindMovie(movie : Movie, listener: OnMovieClickListener){
             itemView.movie_title.text = movie.title
             itemView.movie_release_date.text = movie.release
             Glide.with(itemView).load(IMAGE_BASE + movie.poster).into(itemView.movie_poster)
+            itemView.setOnClickListener {
+                listener.onMovieClick(movie)
+            }
         }
     }
 
@@ -32,8 +37,11 @@ class MovieAdapter(
     override fun getItemCount(): Int = movies.size
 
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
-        holder.bindMovie(movies.get(position))
+        holder.bindMovie(movies[position],listener)
     }
 
+    interface OnMovieClickListener {
+        fun onMovieClick(movie: Movie)
+    }
 
 }
