@@ -21,12 +21,14 @@ import retrofit2.Response
 class InfoActivity : AppCompatActivity() {
     private var movieId: Int = 0
     private var movieInfo: MovieInfo? = null
+    private var uniqueId: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info)
         FirebaseApp.initializeApp(this)
         movieId = intent.getStringExtra("movieId").toString().toInt()
+        uniqueId = intent.getStringExtra("uniqueId").toString()
 
         val database = FirebaseDatabase.getInstance()
 
@@ -37,7 +39,7 @@ class InfoActivity : AppCompatActivity() {
 
         btnFav.setOnClickListener {
             try {
-                val movieRef = database.getReference("movies/fav").child(movieId.toString())
+                val movieRef = database.getReference(uniqueId + "/movies/fav").child(movieId.toString())
                 movieRef.addListenerForSingleValueEvent(object : ValueEventListener {
                     override fun onDataChange(dataSnapshot: DataSnapshot) {
                         if (dataSnapshot.exists()) {
@@ -80,7 +82,7 @@ class InfoActivity : AppCompatActivity() {
 
         btnRemoveFav.setOnClickListener {
             try {
-                val movieRef = database.getReference("movies/fav").child(movieId.toString())
+                val movieRef = database.getReference(uniqueId + "/movies/fav").child(movieId.toString())
                     .removeValue().addOnSuccessListener {
                         Toast.makeText(this, "Filme removido com sucesso!", Toast.LENGTH_SHORT).show()
                     }.addOnFailureListener {
