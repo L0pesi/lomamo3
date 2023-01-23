@@ -281,12 +281,12 @@ Use this space to list resources you find helpful and would like to give credit 
 [contributors-url]: https://github.com/L0pesi/lomamo3/graphs/contributors
 [github]: https://img.shields.io/badge/github-%23121011.svg?style=flat&logo=github&logoColor=white
 [github-sergio]: https://github.com/L0pesi/
-[github-diogo]: https://github.com/jose-artur90/
-[github-yuno]: https://github.com/RodolfoMota/
+[github-ze]: https://github.com/jose-artur90/
+[github-rodolfo]: https://github.com/RodolfoMota/
 [gmail]: https://img.shields.io/badge/Gmail-D14836?style=plastic&logo=gmail&logoColor=white
 [gmail-sergio]: sergiomaciel21@gmail.com
-[gmail-diogo]: jose.artur.matos90@gmail.com
-[gmail-yuno]: rmota@egapi.com
+[gmail-ze]: jose.artur.matos90@gmail.com
+[gmail-rodolfo]: rmota@egapi.com
 [forks-shield]: https://img.shields.io/github/languages/code-size/L0pesi/LomamoMovieApp?style=for-the-badge
 [forks-url]: https://github.com/L0pesi/lomamo3/
 [stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
